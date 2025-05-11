@@ -15,4 +15,5 @@ images:
   - 'gcr.io/funnyscar/account-service'
 options:
   logging: CLOUD_LOGGING_ONLY
-serviceAccount: 'projects/funnyscar/serviceAccounts/firebase-adminsdk-r5s26@funnyscar.iam.gserviceaccount.com'
+  defaultLogsBucketBehavior: REGIONAL_USER_OWNED_BUCKET
+  logsBucket: "gs://funnyscar_cloudbuild"
