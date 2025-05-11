@@ -27,10 +27,10 @@ def send_email(subject, body):
 def handle_portfolio_update(data):
     """Handle portfolio updates and send an email notification."""
 
-	print("Portfolio updated:", data)
-	subject = "Portfolio Update Notification"
-	body = f"Portfolio Update:\n{data}"
-	send_email(subject, body)
+    print("Portfolio updated:", data)
+    subject = "Portfolio Update Notification"
+    body = f"Portfolio Update:\n{data}"
+    send_email(subject, body)
 
 # Subscribe to account and portfolio updates
 trading_stream.subscribe_trade_updates(handle_portfolio_update)
