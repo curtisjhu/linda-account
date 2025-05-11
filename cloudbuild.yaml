@@ -14,5 +14,6 @@ steps:
 images:
   - 'gcr.io/funnyscar/account-service'
 
+serviceAccount: 'firebase-adminsdk-r5s26@funnyscar.iam.gserviceaccount.com'
 options:
   logging: CLOUD_LOGGING_ONLY
