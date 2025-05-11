@@ -18,3 +18,4 @@ logsBucket: 'gs://funnyscar_cloudbuild'
 options:
   logging: GCS_ONLY
   defaultLogsBucketBehavior: REGIONAL_USER_OWNED_BUCKET
+  serviceAccount: 'firebase-adminsdk-r5s26@funnyscar.iam.gserviceaccount.com'
