@@ -13,7 +13,8 @@ steps:
            '--allow-unauthenticated']
 images:
   - 'gcr.io/funnyscar/account-service'
+
+logsBucket: 'gs://funnyscar_cloudbuild'
 options:
-  logging: CLOUD_LOGGING_ONLY
+  logging: GCS_ONLY
   defaultLogsBucketBehavior: REGIONAL_USER_OWNED_BUCKET
-  logsBucket: "gs://funnyscar_cloudbuild"
