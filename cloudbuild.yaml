@@ -1,0 +1,16 @@
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'gcr.io/funnyscar/account-service', '.']
+
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'gcr.io/funnyscar/account-service']
+
+  - name: 'gcr.io/cloud-builders/gcloud'
+    args: ['run', 'deploy', 'account-service', \
+           '--image', 'gcr.io/funnyscar/account-service', \
+           '--platform', 'managed', \
+           '--region', 'us-central1', \
+           '--allow-unauthenticated']
+
+images:
+  - 'gcr.io/funnyscar/account-service'
