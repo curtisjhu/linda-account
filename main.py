@@ -4,7 +4,7 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from helper import *
 
-trading_stream = TradingStream(api_key, api_secret, paper=(not is_prod))
+trading_stream = TradingStream(api_key, api_secret, paper=True)
 
 def send_email(subject, body):
     """Send an email with the given subject and body."""
