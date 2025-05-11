@@ -3,10 +3,11 @@ from alpaca.trading.stream import TradingStream
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
+from helper import *
 
 # Initialize Alpaca Trading Client and Stream
-trading_client = TradingClient(api_key, api_secret, paper=True)
-trading_stream = TradingStream(api_key, api_secret, paper=True)
+trading_client = TradingClient(api_key, api_secret, paper=(not is_prod))
+trading_stream = TradingStream(api_key, api_secret, paper=(not is_prod))
 
 def send_email(subject, body):
     """Send an email with the given subject and body."""
