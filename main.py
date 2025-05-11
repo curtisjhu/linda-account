@@ -24,7 +24,7 @@ def send_email(subject, body):
     except Exception as e:
         print(f"Failed to send email: {e}")
 
-def handle_portfolio_update(data):
+async def handle_portfolio_update(data):
     """Handle portfolio updates and send an email notification."""
 
     print("Portfolio updated:", data)
